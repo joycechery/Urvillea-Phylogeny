@@ -7,13 +7,13 @@ library(grDevices)
 library(geiger)
 
 setwd("~/Desktop/")
-tree <-read.tree("Tree_3.tre")
+tree <-read.tree("Tree.tre")
 
 #tree$tip.label
 tree <- reroot(tree, 1, interactive = TRUE)
 
 # upload data 
-data  <- read.csv("Data_3.csv", row.names = 1) 
+data  <- read.csv("Data.csv", row.names = 1) 
 datum <- as.data.frame(cbind(rownames(data), data[,1]), row.names = FALSE)
 datum <- datum[complete.cases(datum), ]
 
