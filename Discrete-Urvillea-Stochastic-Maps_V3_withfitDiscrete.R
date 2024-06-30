@@ -58,8 +58,8 @@ XX<-sapply(simmap.trees,foo)
 pies<-t(apply(XX,1,function(x,levels,Nsim) summary(factor(x,levels))/Nsim,levels=states,Nsim=1000))
 
 #generate summary of stochastic maps with pies of posterior at nodes..
-#see below (line 72) for plot_simmap function
 
+source("plot_simmap.R")
 plot_simmap(time_tree = simmap.trees[[1]], 
             tree = simmap.trees[[1]], 
             simmaps = simmap.trees, 
